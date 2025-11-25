@@ -16,12 +16,16 @@
 
 body {
     font-family: "holen";
+    width: 100%;
+    height: 115vh;
 }
 
 .bg-container {
     background-image: url("../images/dark-coffee-background-hand-drawings-placed-left-side-banner_638892-1682.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .shopping-header {
@@ -43,12 +47,11 @@ body {
 }
 
 .search-form button {
-    background: linear-gradient(190deg, rgba(46, 37, 26, 1) 37%, rgba(121, 101, 9, 1) 100%);
     width: 60px;
     height: 100%;
     padding: 3px;
     border-radius: 15px 0 0 15px;
-    color: #f6f6f6;
+    color: #4d3319;
 }
 
 .shopping-icon {
@@ -60,9 +63,10 @@ body {
 }
 
 .total-quantity {
+    padding: 15px;
     position: absolute;
-    left: -13%;
-    top: -13%;
+    left: -20px;
+    top: -10px;
     border-radius: 50%;
     width: 1.4rem;
     height: 1.4rem;
@@ -108,7 +112,7 @@ nav ul li button.category-value.active {
 .cart {
     width: 220px;
     height: 330px;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     background-color: #FFEBCD;
     overflow: hidden;
 }
@@ -138,14 +142,13 @@ nav ul li button.category-value.active {
 }
 
 .cart button.addToCart {
-    background: linear-gradient(190deg, rgba(46, 37, 26, 1) 37%, rgba(121, 101, 9, 1) 100%);
+    background: linear-gradient(190deg, rgba(46, 37, 26, 1) 37%, rgb(115, 108, 79) 100%);
     color: #f6f6f6;
     border: none;
     outline: none;
     width: 100%;
     margin-inline: auto;
     padding: 10px;
-    border-radius: 15px;
 }
 
 /* categories */
@@ -279,6 +282,37 @@ nav ul li button.category-value.active {
     left: calc(100% - 400px);
 }
 
-.active .shoppingCart-container , .active nav {
+.active .shoppingCart-container,
+.active nav {
     transform: translateX(-100px);
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-container button {
+    width: 40px;
+    height: 40px;
+    color: #4d3319;
+    background-color: #FFEBCD;
+    border: 1px solid #4d3319;
+    border-radius: 5px;
+    margin-inline: 2px;
+}
+
+.pagination-container button.active {
+    background-color: #4d3319;
+    color: #FFEBCD;
+    opacity: 0.8;
+}
+
+.pagination-container span {
+    color: #FFEBCD;
+    font-size: 1.5rem;
+    margin-inline: 5px;
+    cursor: pointer;
 }
